@@ -1,10 +1,7 @@
 /**
  * 
- * 
  * This class is used to get the product information.
  * @author 764432
- * 
- * 
  */
 package com.cts.controller;
 
