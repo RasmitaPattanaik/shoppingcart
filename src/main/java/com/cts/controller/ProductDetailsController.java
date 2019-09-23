@@ -1,6 +1,10 @@
 /**
+ * 
+ * 
  * This class is used to get the product information.
  * @author 764432
+ * 
+ * 
  */
 package com.cts.controller;
 
@@ -58,6 +62,7 @@ public class ProductDetailsController {
 	@PostMapping
 	public ResponseEntity<String> addItem(@RequestBody Product product) {
 		String addItemResponse = productDetailsService.addItem(product);
+		System.out.println("coming inside");
 		if(addItemResponse != null) {
 			return new ResponseEntity(addItemResponse, HttpStatus.OK);
 		} else {
