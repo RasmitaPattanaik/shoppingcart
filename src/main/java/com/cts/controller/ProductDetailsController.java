@@ -75,7 +75,7 @@ public class ProductDetailsController {
 	 */
 	@DeleteMapping(path = "/{prodId}")
 	public ResponseEntity<String> removeItem(@PathVariable("prodId") final String prodId) {
-		System.out.println("hello inside");
+		System.out.println("hello inside111");
 		String proId = productDetailsService.removeItem(prodId);
 		if (proId == null) {
 			return new ResponseEntity("Product not found in the system", HttpStatus.NOT_FOUND);
