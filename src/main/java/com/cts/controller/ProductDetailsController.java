@@ -1,6 +1,12 @@
 /**
+ * 
  * This class is used to get the product information.
- * @author 764432
+ * @author
+ * 
+ * 
+ * 
+ * 
+ * 
  */
 package com.cts.controller;
 
@@ -58,6 +64,7 @@ public class ProductDetailsController {
 	@PostMapping
 	public ResponseEntity<String> addItem(@RequestBody Product product) {
 		String addItemResponse = productDetailsService.addItem(product);
+		System.out.println("coming inside");
 		if(addItemResponse != null) {
 			return new ResponseEntity(addItemResponse, HttpStatus.OK);
 		} else {
@@ -73,6 +80,7 @@ public class ProductDetailsController {
 	 */
 	@DeleteMapping(path = "/{prodId}")
 	public ResponseEntity<String> removeItem(@PathVariable("prodId") final String prodId) {
+		System.out.println("hello inside111");
 		String proId = productDetailsService.removeItem(prodId);
 		if (proId == null) {
 			return new ResponseEntity("Product not found in the system", HttpStatus.NOT_FOUND);
