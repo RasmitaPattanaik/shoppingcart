@@ -40,7 +40,7 @@ public class AuthController {
 	 */
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String login(@RequestBody final User user) {
-
+			System.out.println("Hello Login:::");
 		/*
 		 * if(authService.login(user).equals("User Looged in sucessfully")){
 		 * return new ResponseEntity(user + authService.login(user)+
